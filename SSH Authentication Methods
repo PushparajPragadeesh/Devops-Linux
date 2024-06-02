@@ -23,3 +23,25 @@ ssh-keygen -f ~/.ssh/id_rsa -p
 
 ssh-keygen -y -f ssh-key.pem
 
+## Add ssh private key to ssh agent ##
+
+eval $(ssh-agent)
+eval 'ssh-agent'
+ssh-add <-- enter the ssh passpharse
+
+## Get the SSH private key ##
+
+ssh-add -l
+
+## Get the SSH public Key ##
+
+ssh-add -L
+
+## Delete the ssh-agent private key ##
+
+ssh-add -D
+
+## we state another private key file as follows ##
+
+ssh-add ~/.ssh/webservers
+
